@@ -89,27 +89,34 @@ public class Quiz5ApiCallActivity extends AppCompatActivity {
         }
 
         private JSONObject getJSONfromURL(String endpoint){
-//            try {
-//                URL url = new URL(endpoint);
-//                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-//
-//                InputStream inputStream = new BufferedInputStream(urlConnection.getInputStream());
-//
-//                BufferedReader bReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"), 8);
-//                StringBuilder sBuilder = new StringBuilder();
-//
-//                String line = null;
-//                while ((line = bReader.readLine()) != null) {
-//                    sBuilder.append(line + "\n");
-//                }
-//
-//                inputStream.close();
-//                String result = sBuilder.toString();
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                URL url = new URL(endpoint);
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+
+                InputStream inputStream = new BufferedInputStream(urlConnection.getInputStream());
+
+                BufferedReader bReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"), 8);
+                StringBuilder sBuilder = new StringBuilder();
+
+                String line = null;
+                while ((line = bReader.readLine()) != null) {
+                    sBuilder.append(line + "\n");
+                }
+
+                inputStream.close();
+                String result = sBuilder.toString();
+
+                JSONObject object = new JSONObject(result);
+
+                return object;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
             return null;
         }
