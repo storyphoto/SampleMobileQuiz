@@ -30,7 +30,6 @@
             android:maxHeight="24dp"
             android:adjustViewBounds="true"
             android:clickable="true"
-            android:onClick="onClick"
             />
         <ImageView
             android:id="@+id/img_2"
@@ -42,7 +41,6 @@
             android:maxHeight="32dp"
             android:adjustViewBounds="true"
             android:clickable="true"
-            android:onClick="onClick"
             />
         <ImageView
             android:id="@+id/img_3"
@@ -54,7 +52,6 @@
             android:maxHeight="32dp"
             android:adjustViewBounds="true"
             android:clickable="true"
-            android:onClick="onClick"
             />
     </LinearLayout>
 

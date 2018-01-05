@@ -26,6 +26,11 @@ public class Quiz4LaunchAppActivity extends AppCompatActivity implements View.On
         image_1 = (ImageView)findViewById(R.id.img_1);
         image_2 = (ImageView)findViewById(R.id.img_2);
         image_3 = (ImageView)findViewById(R.id.img_3);
+
+        //버튼 이벤트 등록
+        image_1.setOnClickListener(this);
+        image_2.setOnClickListener(this);
+        image_3.setOnClickListener(this);
     }
 
     @Override
