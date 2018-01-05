@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/quiz4_mainimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/main_image"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:id="@+id/quiz4_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/quiz4_mainimage"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_call"
+            android:maxWidth="24dp"
+            android:maxHeight="24dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+        <ImageView
+            android:id="@+id/img_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_location"
+            android:maxWidth="32dp"
+            android:maxHeight="32dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+        <ImageView
+            android:id="@+id/img_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_internet"
+            android:maxWidth="32dp"
+            android:maxHeight="32dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/quiz4_icons"/>
+
+</RelativeLayout>
